@@ -32,7 +32,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
 ------ Tab
      local Tab1o = MakeTab({Name = "Script Farm"})
      local Tab2o = MakeTab({Name = "Script Hop"})
-     
+     local Tab3o = MakeTab({Name = "Auto Fruit"})
 ------- BUTTON
     
     AddButton(Tab1o, {
@@ -130,5 +130,22 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Loader/main/
      Name = "Full Moon",
     Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/giahuy-roy/GiaHuy/refs/heads/main/GiaHuy.Hop.FM"))()(Settings)
+  end
+  })
+  
+  AddButton(Tab3o, {
+     Name = "Auto Fruit",
+    Callback = function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/refs/heads/main/TraiCay.lua"))()(Settings)
+  end
+  })
+  
+  AddButton(Tab2o, {
+     Name = "Hop Vip",
+    Callback = function()
+	  getgenv().Mode = "name boss" -- rip_indra, Dough King, Pull Lever, TOTS, Darkbeard
+getgenv().Team = "Marines"
+repeat task.wait() until game:IsLoaded() and game:GetService("Players") and game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f0952c4a5f3db9e01f4dbd099c1f9b3c.lua"))()(Settings)
   end
   })
